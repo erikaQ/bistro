@@ -1,0 +1,44 @@
+//main: style.scss
+
+// Style for columns text
+@mixin columns-text($width, $count, $padding, $divider_widh, $divider_line, $divider_color) {
+	@include columns($width $count); // Count and width or columns
+	@include column-gap($padding); // Padding for columns
+	@include column-rule($divider_widh $divider_line $divider_color); // Divider for columns
+}
+
+
+// Float el clear
+%clear_a {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_b {
+	&:before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_all {
+	@extend %clear_a;
+	@extend %clear_b;
+}
+
+// Transition el
+@mixin trs($trs_speed) {
+	transition: all $trs_speed;
+}
+
+// Placeholder for input
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}

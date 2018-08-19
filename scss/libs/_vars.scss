@@ -1,0 +1,34 @@
+//main: style.scss
+
+$main_font_family: 'Gill Sans MT', sans-serif;
+
+%f_bold {
+	font-weight: 600;
+}
+%f_normal {
+	font-weight: 400;
+}
+%f_light {
+	font-weight: 300;
+}
+
+// Elements color
+$el-bg-colors: (
+	primary: #000,
+	success: #27BA6C,
+	info: #03a9f4,
+	warning: #FF8833,
+	danger: #ff1a1a,
+);
+
+// Breakpoints ================================
+//
+$breakpoint-small:                               480px !default;
+$breakpoint-medium:                              760px !default;
+$breakpoint-large:                               960px !default;
+$breakpoint-xlarge:                              1200px !default;
+
+$breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                           ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                          ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                           ($breakpoint-xlarge - 1) !default;

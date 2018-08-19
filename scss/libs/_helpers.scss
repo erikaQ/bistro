@@ -1,0 +1,51 @@
+//main: style.scss
+
+.dn, .hidden {display: none;}
+
+.clearfix:after {
+	content: '';
+	clear: both;
+	display: table;
+	width: 100%;
+}
+
+.link {
+	position: relative;
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		@media (max-width : 480px) {
+			text-decoration: none;
+		}
+	}
+	&__btn {
+		background-color: transparent;
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+		color: #27272B;
+		text-decoration: none;
+	}
+}
+
+.more {
+	color: #2C85B8;
+}
+
+// .caret {
+// 	position: absolute;
+// 	top: 23px;
+// 	right: 8px;
+// 	z-index: 100;
+// 	width: 8px;
+// 	height: 7px;
+// 	display: inline-block;
+// 	background: url('../img/icons/arrow_down.svg') no-repeat center center;
+// 	-webkit-background-size: 8px 7px;
+// 	background-size: 8px 7px;
+// 	&.open {
+// 		background: url('../img/icons/arrow_up.svg') no-repeat;
+// 		-webkit-background-size: 8px 7px;
+// 		background-size: 8px 7px;
+// 	}
+// }
