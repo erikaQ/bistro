@@ -6,12 +6,15 @@
 	font-size: 13px;
 	background-color: #f7f5f2;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	transition: margin-bottom .7s;
 	@extend %clear_a;
 	@media (max-width : 991px) {
 		padding: 0;
 	}
 	@media (max-width : 767px) {
-		margin: 0 -15px;
+		.container_center {
+			padding: 0;
+		}
 	}
 }
 
@@ -36,22 +39,15 @@
 		margin-left: -20px;
 	}
 	@media (max-width : 767px) {
-		position: absolute;
-		top: 100%;
+		position: relative;
+		top: 41px;
 		width: 100%;
+		z-index: 10;
 		margin-left: 0;
+		margin-bottom: 41px;
 		display: none;
 		background-color: #5d5d5d;
 	}
-	// &__wrap {
-		
-	// 	@media (max-width : 767px) {
-	// 		position: relative;
-	// 		padding: 20px 0 21px;
-	// 		float: none;
-	// 		cursor: pointer;
-	// 	}
-	// }
 	&__item {
 		float: left;
 		margin-left: 36px;

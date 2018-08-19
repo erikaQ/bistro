@@ -10,17 +10,17 @@ Table of Content
 1.4. Global syyles
 1.5. Helpers styles
 
-2. Parts
-2.1. Header
+3. Parts
+3.1. Header
 ===========================*/
 
 /* Libs
  ----------------------------------------------------------------------------- */
-@import "libs/_fonts";
-@import "libs/_vars";
-@import "libs/_mixins";
-@import "libs/_global";
-@import "libs/_helpers";
+@import "_fonts";
+@import "_vars";
+@import "_mixins";
+@import "_global";
+@import "_helpers";
 
 /* Middle
  ----------------------------------------------------------------------------- */
@@ -43,8 +43,13 @@ Table of Content
 	}
 }
 
+/* Libs
+ ----------------------------------------------------------------------------- */
+ @import "libs/slick";
+
 
 
 /* parts
  ----------------------------------------------------------------------------- */
 @import "parts/header";
+@import "parts/slider-top";

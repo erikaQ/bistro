@@ -53,10 +53,11 @@ $(document).ready(function() {
     $('.js__navbar-toggle').on('click', function(e) {
 		e.preventDefault();
 		var $this = $(this),
-			navbar = $('.js-navbar');
+			navbar = $('.js-navbar'),
+			navH = $('.js-navbar').innerHeight();
 
 		if(!$this.hasClass('open')) {
-			$('.js-navbar').slideUp(100);
+			$('.js-navbar').slideUp(1000);
 			$('.js__navbar-toggle').removeClass('open');
 		}
 
