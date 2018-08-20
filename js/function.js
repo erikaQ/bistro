@@ -65,7 +65,28 @@ $(document).ready(function() {
 		$(navbar).slideToggle();
 	});
 
+
 	// Slick slider https://github.com/kenwheeler/slick
-	
+	$('.js-slider__top').slick({
+		arrows: false,
+		dots: true,
+		slidesToShow: 1
+		// dotsClass: 'slider__top_dots'
+	});
+	$('.slick-dots').slick({
+		arrows: false,
+		dots: false,
+		slidesToShow: 6,
+		infinite: true
+	});
+	$('.js-slider__top_prev').on('click', function() {
+	 	$('.js-slider__top').slick('slickPrev');
+	 });
+
+	 $('.js-slider__top_right').on('click', function() {
+	 	$('.js-slider__top').slick('slickNext');
+	 });
+
+	// $('.slick-dots .slick-track').prop('transform', 'translate3d(0px, 0px, 0px)');
 
 });
