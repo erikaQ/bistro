@@ -6,7 +6,12 @@
     padding: 18px 0 6px;
 	font-size: 13px;
 	background-color: #f7f5f2;
+	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+	-webkit-transition: margin-bottom .7s;
+	-moz-transition: margin-bottom .7s;
+	-o-transition: margin-bottom .7s;
 	transition: margin-bottom .7s;
 	@extend %clear_a;
 	@media (max-width : 991px) {

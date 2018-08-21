@@ -2,6 +2,9 @@
 
 .maps  {
 	margin-bottom: 80px;
+	@media (max-width : 768px) {
+		margin-bottom: 40px;
+	}
 	&__nav {
 		border-bottom: 0;
 		@extend %clear_a;
@@ -31,9 +34,9 @@
 				color: #ff9016;
 				text-decoration: none;
 			}
-			&.active {
-				color: #ff9016;
-			}
+			// &.active {
+			// 	color: #ff9016;
+			// }
 			@media (max-width : 479px) {
 				padding: 10px 0;
 			}
@@ -51,4 +54,23 @@
 			height: 560px;
 		}
 	}
+}
+
+.ymaps-2-1-68-balloon__content {
+	padding: 20px 63px 20px 20px !important;
+}
+.balloonTime {
+	color: #000;
+	font-size: 22px;
+	font-family: 'Gill Sans MT', sans-serif;
+	font-weight: 300;
+	line-height: 1.2;
+}
+.ballonPhone {
+	margin-top: 10px;
+	color: #000;
+	font-size: 16px;
+	font-family: 'Gill Sans MT', sans-serif;
+	font-weight: 300;
+	line-height: 1.2;
 }

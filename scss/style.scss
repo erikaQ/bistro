@@ -3,38 +3,42 @@
 /*===========================
 Table of Content
 
-1. Libs
+1. Add
 1.1. Fonts
-1.2. Variables
+1.2. Vars
 1.3. Mixins
 1.4. Global syyles
 1.5. Helpers styles
 
+2. Libs
+2.1. Slick slider
+2.2. Tabs
+
 3. Parts
 3.1. Header
+3.2. Slider-Top
+3.3. Menu
+3.4. Maps
+3.5. Actions
+3.6. Interior
+3.7. Feedback
+3.8. Footer
 ===========================*/
 
-/* Libs
+/* Add
  ----------------------------------------------------------------------------- */
-@import "_fonts";
-@import "_vars";
-@import "_mixins";
-@import "_global";
-@import "_helpers";
+@import "add/_fonts";
+@import "add/_vars";
+@import "add/_mixins";
+@import "add/_global";
+@import "add/_helpers";
 
-/* Middle
- ----------------------------------------------------------------------------- */
-// .main__content {
-// 	padding-bottom: 100px;
-// 	padding-bottom: 4000px;
-// 	@extend %clear_a;
-// }
 
 /* Libs
  ----------------------------------------------------------------------------- */
 // @import "libs/slick";
-@import "libs/tabs";
 @import "libs/slider";
+@import "libs/tabs";
 
 
 /* parts

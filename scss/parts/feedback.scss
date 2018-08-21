@@ -1,8 +1,9 @@
 //main: style.scss
 
 .feedback {
-	height: 350px;
-	padding: 45px 0;
+	padding: 45px 0 55px;
+	margin-bottom: 0;
+	overflow: hidden;
 	background: url('../img/form_bg.png') no-repeat;
 	@media (max-width : 768px) {
 		height: auto;
@@ -20,6 +21,8 @@
 		    padding: 30px 30px 15px;
 			margin: 0 auto;
 			background-color: #fff;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
 			box-sizing: border-box;
 			@media (max-width : 768px) {
 				width: 100%;
@@ -63,8 +66,8 @@
 	}
 	&__call {
 		margin-top: -5px;
-		width: 29%;
-		margin-right: 45px;
+		width: 31%;
+		margin-right: 30px;
 		float: left;
 		font-family: 'Gill Sans Light';
 		@media (max-width : 768px) {
@@ -129,6 +132,11 @@
 			&_btn {
 				width: 100%;
 			}
+		}
+	}
+	[required] {
+		&.invalid {
+			border-color: red;
 		}
 	}
 }

@@ -29,6 +29,9 @@
 		height: 40px;
 		display: block;
 		cursor: pointer;
+		-webkit-background-size: 8px 15px !important;
+		-moz-background-size: 8px 15px !important;
+		-o-background-size: 8px 15px !important;
 		background-size: 8px 15px !important;
 	}
 	&_prev {

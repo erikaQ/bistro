@@ -14,6 +14,9 @@
 		width: 1059px;
 		height: 1341px;
 		background: url('../img/menu_bg.png') no-repeat;
+		-webkit-background-size: 1059px 1341px;
+		-moz-background-size: 1059px 1341px;
+		-o-background-size: 1059px 1341px;
 		background-size: 1059px 1341px;
 		@media (max-width : 1920px) {
 			right: 6%;
@@ -26,12 +29,18 @@
 			top: 40px;
 			width: 840px;
 			height: 1063px;
+			-webkit-background-size: 840px 987px;
+			-moz-background-size: 840px 987px;
+			-o-background-size: 840px 987px;
 			background-size: 840px 987px;
 		}
 		@media (max-width : 1200px) {
 			top: 60px;
 			width: 780px;
 			height: 987px;
+			-webkit-background-size: 780px 987px;
+			-moz-background-size: 780px 987px;
+			-o-background-size: 780px 987px;
 			background-size: 780px 987px;
 		}
 		@media (max-width : 992px) {
@@ -39,6 +48,9 @@
 			right: -60px;
 			width: 640px;
 			height: 810px;
+			-webkit-background-size: 640px 810px;
+			-moz-background-size: 640px 810px;
+			-o-background-size: 640px 810px;
 			background-size: 640px 810px;
 		}
 		@media (max-width : 768px) {
@@ -46,6 +58,9 @@
 			right: -60px;
 			width: 640px;
 			height: 810px;
+			-webkit-background-size: 640px 810px;
+			-moz-background-size: 640px 810px;
+			-o-background-size: 640px 810px;
 			background-size: 640px 810px;
 			opacity: .2;
 		}
@@ -54,6 +69,9 @@
 			right: -30px;
 			width: 480px;
 			height: 607px;
+			-webkit-background-size: 480px 607px;
+			-moz-background-size: 480px 607px;
+			-o-background-size: 480px 607px;
 			background-size: 480px 607px;
 		}
 		@media (max-width : 320px) {
@@ -61,6 +79,9 @@
 			right: 0px;
 			width: 320px;
 			height: 405px;
+			-webkit-background-size: 320px 405px;
+			-moz-background-size: 320px 405px;
+			-o-background-size: 320px 405px;
 			background-size: 320px 405px;
 		}
 	}

@@ -20,7 +20,7 @@
 		<div class="container_center">
 		
 			<!-- navbar  -->
-			<ul class="navbar js-navbar" id="navbar">
+			<ul class="navbar js-navbar" id="js-navbar">
 				<li class="navbar__item">
 					<a href="#about" class="navbar__link">О нас</a>
 				</li>
@@ -31,7 +31,7 @@
 					<a href="#maps" class="navbar__link">Где мы находимся</a>
 				</li>
 				<li class="navbar__item">
-					<a href="#discounts" class="navbar__link">Акции</a>
+					<a href="#actions" class="navbar__link">Акции</a>
 				</li>
 				<li class="navbar__item">
 					<a href="#interiors" class="navbar__link">Интерьеры</a>
@@ -75,13 +75,13 @@
 	<!-- begin main__content -->
 	<main class="main__content">
 
-		<section class="slider__top js-slider__top">
+		<section class="slider__top js-slider__top" id="about">
 			<div class="js-slide">
 				<div class="slider__top_slide slider__top_slide1">
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>2 кафе в самом центре<br>Москвы и бесплатный Wi-Fi</h3>
 							<ul class="slider__top_addresses">
 								<li class="slider__top_addresses_item">Большая Лубянка, 12/1</li>
@@ -100,7 +100,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Исторические здания<br>с восхищающими интерьерами</h3>
 							<div class="slider__top_addresses">Фьюжн ар-деко, советской<br>архитектуры и современных<br>деталей</div>
 							<div class="slider__top_arrows">
@@ -116,7 +116,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Уютные столики для больших<br>и маленьких компаний</h3>
 							<div class="slider__top_arrows">
 								<a href="#" class="slider__top_prev slider__top_arrow js-slider__top_prev"></a>
@@ -131,7 +131,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Полноценное меню<br>от итальянского шефа<br>Алессио Джини</h3>
 							<div class="slider__top_addresses">Авторские блюда<br>и полюбившиеся хиты</div>
 							<div class="slider__top_arrows">
@@ -147,7 +147,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Все блюда только из-под ножа</h3>
 							<div class="slider__top_addresses">Натуральные сезонные продукты<br>и никаких полуфабрикатов!</div>
 							<div class="slider__top_arrows">
@@ -163,7 +163,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Завтрак с видом<br>на просыпающийся город</h3>
 							<div class="slider__top_addresses">А с 12:00 до 16:00 по будням —<br>скидка на основное меню</div>
 							<div class="slider__top_arrows">
@@ -179,7 +179,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Вино без ресторанной наценки — <br>эксклюзивно из Энотеки <br>«Азбуки Вкуса» </h3>
 							<div class="slider__top_arrows">
 								<a href="#" class="slider__top_prev slider__top_arrow js-slider__top_prev"></a>
@@ -194,7 +194,7 @@
 					<div class="slider__top_bg"></div>
 					<div class="container_center">
 						<div class="slider__top_info">
-							<img src="img/logo.png" alt="logo" class="slider__top_logo">
+							<img src="img/logo.svg" alt="logo" class="slider__top_logo">
 							<h3>Запоминающаяся винная карта</h3>
 							<div class="slider__top_addresses">Нерастиражированные образцы<br>знаменитых винных домов<br>и уникальные вина собственного<br>импорта</div>
 							<div class="slider__top_arrows">
@@ -1390,7 +1390,7 @@
 				<h2 class="line">Адреса наших ресторанов</h2>
 
 				<ul class="maps__nav">
-					<li class="maps__nav_item"><a href="#map1" class="maps__nav_link active">Арбат,  54/2, стр. 4</a></li>
+					<li class="maps__nav_item"><a href="#map1" class="maps__nav_link">Арбат,  54/2, стр. 4</a></li>
 					<li class="maps__nav_item"><a href="#map2" class="maps__nav_link">Большая Лубянка, 12/1</a></li>
 				</ul>
 
@@ -1398,6 +1398,7 @@
 
 			<div class="maps__map_wrap">
 				<div class="maps__map" id="map"></div>
+				<!-- <div class="maps__map" id="map" style="width: 100%; height: 560px"></div> -->
 			</div>
 		</section><!-- /.maps-->
 
@@ -1434,7 +1435,7 @@
 		</section><!-- /.actions-->
 
 
-		<section class="interior" id="interior">
+		<section class="interior" id="interiors">
 
 			<div class="container_center">
 
@@ -1485,28 +1486,29 @@
 		<section class="feedback" id="feedback">
 			<div class="feedback__form_wrap">
 				<div class="feedback__call">
-					<div class="feedback__call_h">Понравилось у нас? Или есть вопросы?</div>
+					<div class="feedback__call_h">Понравилось у нас?<br>Или есть вопросы?</div>
 					<div class="feedback__call_p">Пишите — нам очень важно ваше мнение!</div>
 				</div>
-				<form action="#" class="feedback__form">
+				<form action="application.php" method="POST" class="feedback__form" id="js-feedback__form">
 					<div class="feedback__form_row">
 						<div class="feedback__form_row_left">
-							<input type="text" class="feedback__form_name" placeholder="Ваше имя">
+							<input type="text" class="feedback__form_name" placeholder="Ваше имя" name="form_name" required>
 						</div>
 						<div class="feedback__form_row_right">
-							<input type="text" class="input feedback__form_email" placeholder="E-mail">
+							<input type="text" class="input feedback__form_email" placeholder="E-mail" name="form_email" required>
 						</div>
 					</div>
 					<div class="feedback__form_row">
-						<textarea class="feedback__form_textarea" placeholder="Комментарий"></textarea>
+						<textarea class="feedback__form_textarea" placeholder="Комментарий" name="form_textarea" required></textarea>
 					</div>
 					<div class="feedback__form_row">
-						<input type="text" class="feedback__captcha_form" placeholder="Введите ответ">
+						<input type="text" class="feedback__captcha_form" placeholder="Введите ответ" name="form_captcha" required>
 						<div class="feedback__captcha_img">
 							<img src="img/captcha_img.png" alt="captcha">
 						</div>
-						<button class="feedback__captcha_btn">Отправить</button>
+						<button type="submit" class="feedback__captcha_btn">Отправить</button>
 					</div>
+					<div id="rezult"></div>
 				</form>
 			</div>
 		</section><!-- /.feedback-->
@@ -1518,24 +1520,37 @@
 </div>
 <!-- end .wrapper -->
 
-<!-- begin footer -->
-<footer class="footer">
+<div class="container_center">
 
-	<div class="container_center">
+	<!-- begin footer -->
+	<footer class="footer">	
 	
-		
+		<div class="footer__left">
+			2018, «Азбука Вкуса». Все права защищены. <a href="#" class="footer__link">Условия и соглашения.</a>
+		</div>
+		<div class="footer__right">
+			<ul class="soc">
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_fb.svg" alt=""></a></li>
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_in.svg" alt=""></a></li>
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_tw.svg" alt=""></a></li>
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_vk.svg" alt=""></a></li>
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_yt.svg" alt=""></a></li>
+			</ul>
+		</div>	
 
-	</div>
+	</footer>
+	<!-- end footer -->
 
-</footer>
-<!-- end footer -->
+</div>
 
 <!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/libs/slick.min.js"></script>
 <script src="js/libs/tab.js"></script>
-<script src="js/libs/google-maps.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2fbhelIg2uXAK2IIkHDYB9jdGQTPT-Hw"></script>
+<script src="js/libs/jquery.validate.min.js"></script>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2fbhelIg2uXAK2IIkHDYB9jdGQTPT-Hw"></script>
+<script src="js/libs/google-maps.js"></script> -->
 <script src="js/function.js"></script>
 
 </body>
