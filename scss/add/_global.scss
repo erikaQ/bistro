@@ -376,14 +376,6 @@ input[type=checkbox]:disabled:indeterminate:before {
 	}	
 }
 
-// Style for columns text
-.column {
-	// @include columns-text(300px, 3, 40px, 1px, solid, #000);
-	// @include columns($width $count); // Count and width or columns
-	// @include column-gap($padding); // Padding for columns
-	// @include column-rule($divider_widh $divider_line $divider_color); // Divider for columns
-}
-
 .main__content {
 	padding-bottom: 100px;
 	@extend %clear_a;
