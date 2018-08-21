@@ -24,33 +24,26 @@ Table of Content
 
 /* Middle
  ----------------------------------------------------------------------------- */
-.main__content {
-	padding-bottom: 100px;
-	padding-bottom: 4000px;
-	@extend %clear_a;
-}
-
-/* Footer
- ----------------------------------------------------------------------------- */
-.footer {
-	position: relative;
-	height: 100px;
-	background: #BFF08E;
-	@extend %clear_all;
-	.container_center {
-		padding-top: 10px;
-		padding-bottom: 10px;
-	}
-}
+// .main__content {
+// 	padding-bottom: 100px;
+// 	padding-bottom: 4000px;
+// 	@extend %clear_a;
+// }
 
 /* Libs
  ----------------------------------------------------------------------------- */
-@import "libs/slick";
-@import "libs/lightslider";
-@import "libs/owl.carousel";
+// @import "libs/slick";
+@import "libs/tabs";
+@import "libs/slider";
 
 
 /* parts
  ----------------------------------------------------------------------------- */
 @import "parts/header";
 @import "parts/slider-top";
+@import "parts/menu";
+@import "parts/maps";
+@import "parts/actions";
+@import "parts/interior";
+@import "parts/feedback";
+@import "parts/footer";

@@ -1,0 +1,134 @@
+//main: style.scss
+
+.feedback {
+	height: 350px;
+	padding: 45px 0;
+	background: url('../img/form_bg.png') no-repeat;
+	@media (max-width : 768px) {
+		height: auto;
+		padding: 45px 15px;
+		background-color: #E3E6E8;
+		background-image: none;
+		@media (max-width : 768px) {
+			padding: 30px 15px;
+		}
+	}
+	&__form {
+		overflow: hidden;
+		&_wrap {
+			width: 830px;
+		    padding: 30px 30px 15px;
+			margin: 0 auto;
+			background-color: #fff;
+			box-sizing: border-box;
+			@media (max-width : 768px) {
+				width: 100%;
+				margin: 0;
+			}
+			@media (max-width : 480px) {
+				padding: 30px 15px 15px;
+			}
+		}
+		&_row {
+			overflow: hidden;
+			margin-bottom: 15px;
+			overflow: hidden;
+			display: block;
+			@extend %clear_a;
+			&_left {
+				width: 40%;
+				float: left;
+				margin-right: 30px;
+				@media (max-width : 768px) {
+					width: 100%;
+					float: none;
+					margin-bottom: 20px;
+				}
+			}
+			&_right {
+				overflow: hidden;
+			}
+			&:nth-child(2) {
+				margin-bottom: 20px;
+			}
+		}
+		&_name,
+		&_email {
+			width: 100%;
+		}
+		&_textarea {
+			width: 100%;
+			height: 80px;
+		}
+	}
+	&__call {
+		margin-top: -5px;
+		width: 29%;
+		margin-right: 45px;
+		float: left;
+		font-family: 'Gill Sans Light';
+		@media (max-width : 768px) {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
+		&_h {
+			margin-bottom: 28px;
+			color: #ff9016;
+			font-size: 28px;
+			@media (max-width : 768px) {
+				margin-bottom: 15px;
+			}
+		}
+		&_p {
+			color: #000;
+			font-size: 18px;
+			line-height: 1.3;
+		}
+	}
+	&__captcha {
+		&_form {
+			width: 24%;
+			float: left;
+			margin-right: 20px;
+		}
+		&_img {
+			float: left;
+			margin-right: 32px;
+		}
+		&_btn {
+			padding: 6px 5px 5px;
+			float: left;
+			overflow: hidden;
+			display: inline-block;
+			color: #ff9016;
+			font-size: 19px;
+			font-weight: 300;
+			cursor: pointer;
+			background-color: #fff;
+			border: 1px solid #ff9016;
+			&:hover {
+				color: #fff;
+				background-color: #ff9016;
+			}
+		}
+		@media (max-width : 600px) {
+			&_form,
+			&_img,
+			&_btn {
+				float: none;
+			}
+			&_form {
+				width: 120px;
+			}
+			&_form,
+			&_img {
+				margin-bottom: 20px;
+			}
+			&_btn {
+				width: 100%;
+			}
+		}
+	}
+}

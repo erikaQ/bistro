@@ -1,0 +1,42 @@
+//main: style.scss
+
+.slider__interior {
+	margin-top: 20px;
+	margin-bottom: 100px;
+	@media (max-width : 768px) {
+		margin-bottom: 40px;
+	}
+	&_item {
+		margin-left: 2px;
+	}
+	&_top {
+		position: relative;
+	}
+	&_arrows {
+		position: absolute;
+		bottom: 22px;
+		right: 0;
+		width: 90px;
+		height: 40px;
+		@media (max-width : 991px) {
+			bottom: 10px;
+		}
+	}
+	&_arrow {
+		position: absolute;
+		z-index: 5;
+		width: 40px;
+		height: 40px;
+		display: block;
+		cursor: pointer;
+		background-size: 8px 15px !important;
+	}
+	&_prev {
+		left: 0;
+		background: #EBEBEB url('../img/arrow__left.svg') no-repeat center center;
+	}
+	&_next {
+		right: 0;
+		background: #EBEBEB url('../img/arrow__right.svg') no-repeat center center;
+	}
+}

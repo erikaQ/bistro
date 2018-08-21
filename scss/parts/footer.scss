@@ -1,0 +1,6 @@
+//main: style.scss
+.footer {
+	position: relative;
+	padding: 30px 0 105px;
+	@extend %clear_all;
+}

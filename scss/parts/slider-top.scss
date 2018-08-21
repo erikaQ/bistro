@@ -315,6 +315,9 @@
 		left: 0;
 		width: 45px;
 		height: 15px;
+		@media (max-width : 1200px) {
+			left: 15px;
+		}
 	}
 	&_arrow {
 		position: absolute;
@@ -335,75 +338,85 @@
 }
 
 .slick-dots {
-	max-width: 1200px;
-	padding: 30px 15px;
-	margin: 0 auto;
-	display: block;
+	height: 80px;
+	overflow: hidden;
+	margin-left: -30px;
+	padding: 30px 0;
 	@extend %clear_a;
+	@media (max-width : 1200px) {
+		padding: 30px 15px;
+	}
+	@media (max-width : 992px) {
+		display: none;
+	}
+	&__wrap {
+		max-width: 1200px;
+		margin: 0 auto;
+	}
 	li {
-		width: 170px !important;
+		width: 170px;
 		float: left;
 		margin-left: 30px;
 		button {
 			width: 170px;
 			height: 80px;
+			overflow: hidden;
 			display: block;
-			color: transparent;
+			cursor: pointer;
 			font-size: 0;
-			background-color: transparent;
 			border: 0;
+			border-top: 2px solid transparent;
+			&.active {
+				opacity: .5;
+				border-top: 2px solid #ff9016;
+			}
+			&:focus {
+			    outline: 0px;
+			}
 		}
-		&:nth-child(1),
-		&:nth-child(9) {
-			// margin-left: 0;
+		&:nth-child(1) {
 			button {
 				background: url('../img/slider-top/slider__top_min1.jpg');
 			}
 		}
-		&:nth-child(2),
-		&:nth-child(10) {
+		&:nth-child(2) {
 			button {
 				background: url('../img/slider-top/slider__top_min2.jpg');
 			}
 		}
-		&:nth-child(3),
-		&:nth-child(11) {
+		&:nth-child(3) {
 			button {
 				background: url('../img/slider-top/slider__top_min3.jpg');
 			}
 		}
-		&:nth-child(4),
-		&:nth-child(12) {
+		&:nth-child(4) {
 			button {
 				background: url('../img/slider-top/slider__top_min4.jpg');
 			}
 		}
-		&:nth-child(5),
-		&:nth-child(13) {
+		&:nth-child(5) {
 			button {
 				background: url('../img/slider-top/slider__top_min5.jpg');
 			}
 		}
-		&:nth-child(6),
-		&:nth-child(14) {
+		&:nth-child(6) {
 			button {
 				background: url('../img/slider-top/slider__top_min6.jpg');
 			}
 		}
+		// &:nth-child(7) {
+		// 	button {
+		// 		background: url('../img/slider-top/slider__top_min7.jpg');
+		// 	}
+		// }
+		// &:nth-child(8) {
+		// 	button {
+		// 		background: url('../img/slider-top/slider__top_min8.jpg');
+		// 	}
+		// }
 		&:nth-child(7),
-		&:nth-child(15) {
-			button {
-				background: url('../img/slider-top/slider__top_min7.jpg');
-			}
+		&:nth-child(8) {
+			visibility: hidden;
 		}
-		&:nth-child(8),
-		&:nth-child(16) {
-			button {
-				background: url('../img/slider-top/slider__top_min8.jpg');
-			}
-		}
-	}
-	.slick-active {
-		opacity: .5;
 	}
 }
