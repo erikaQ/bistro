@@ -1,7 +1,8 @@
 //main: style.scss
 
 .actions {
-	margin: 0 -15px 56px;
+	// margin: 0 -15px 56px;
+	margin-bottom: 56px;
 	overflow: hidden;
 	@media (max-width : 1365px) {
 		margin: 0 0 56px;
@@ -13,7 +14,7 @@
 		margin-top: 20px;
 		margin-left: -30px;
 		width: auto;
-		clear: both;
+		overflow: hidden;
 		@media (max-width : 600px) {
 			margin-left: 0;
 		}
