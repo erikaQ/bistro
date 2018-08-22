@@ -29,6 +29,12 @@ html,body,.wrapper {
 	position: relative;
 }
 
+html {
+	width: 100%;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
 body {
 	width: 100%;
 	max-width: 100%;
@@ -115,7 +121,7 @@ h4 {
 
 .container_center {
 	max-width: 1200px;
-	// padding: 0 15px;
+	padding: 0 15px;
 	margin-left: auto;
 	margin-right: auto;
 }
