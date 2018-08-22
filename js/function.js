@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 
 	    myMap.behaviors.disable([
-	    	'drag',
+	    	// 'drag',
 	    	'scrollZoom'
     	]);
 
