@@ -62,19 +62,18 @@ $(document).ready(function() {
 	// Slider Top
 	$('.js-slider__top').slick({
 		arrows: false,
-		dots: true,
+		dots: false,
 		slidesToShow: 1,
-		responsive: [
-	    {
-			breakpoint: 992,
-			settings: {
-				dots: false
-			}
-	    }
-	    ]
+		asNavFor: '.js-slider__top_gallery'
 	});
-	
-	$('.slick-dots').wrap('<div class="slick-dots__wrap"></div>');
+	$('.js-slider__top_gallery').slick({
+	  slidesToShow: 6,
+	  slidesToScroll: 1,
+	  asNavFor: '.js-slider__top',
+	  dots: false,
+	  arrows: false,
+	  focusOnSelect: true
+	});
 
 	$('.js-slider__top_prev').on('click', function() {
 	 	$('.js-slider__top').slick('slickPrev');
@@ -84,11 +83,11 @@ $(document).ready(function() {
 	 	$('.js-slider__top').slick('slickNext');
 	 });
 
-	$('.slick-dots__wrap button').on('click', function() {
+	$('.slider__top_gallery_item').on('click', function() {
 		var $this = $(this);
 
 		if( !$this.hasClass('active') ) {
-			$('.slick-dots__wrap button').removeClass('active');
+			$('.slider__top_gallery_item').removeClass('active');
 		}
 
 		$this.toggleClass('active');
@@ -149,7 +148,7 @@ $(document).ready(function() {
 
 
 	    myMap.behaviors.disable([
-	    	// 'drag',
+	    	'drag',
 	    	'scrollZoom'
     	]);
 
