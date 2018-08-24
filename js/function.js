@@ -16,16 +16,14 @@ $(document).ready(function() {
 	});
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку.
-    $(document).ready(function(){
-        var HeaderTop = $('#js-header').offset().top + 50;
-        
-        $(window).scroll(function(){
-                if( $(window).scrollTop() > HeaderTop ) {
-                        $('#js-header').addClass('stiky');
-                } else {
-                        $('#js-header').removeClass('stiky');
-                }
-        });
+    var HeaderTop = $('#js-header').offset().top + 50;
+    
+    $(window).scroll(function(){
+            if( $(window).scrollTop() > HeaderTop ) {
+                    $('#js-header').addClass('stiky');
+            } else {
+                    $('#js-header').removeClass('stiky');
+            }
     });
 
     // Smooth scroll to the pages Block
@@ -72,7 +70,15 @@ $(document).ready(function() {
 	  asNavFor: '.js-slider__top',
 	  dots: false,
 	  arrows: false,
-	  focusOnSelect: true
+	  focusOnSelect: true,
+	  responsive: [
+	    {
+			breakpoint: 1000,
+			settings: {
+				slidesToShow: 5
+			}
+		}
+	    ]
 	});
 
 	$('.js-slider__top_prev').on('click', function() {
@@ -107,8 +113,10 @@ $(document).ready(function() {
 				arrows: false,
 				centerMode: true,
 		        centerPadding: '60px',
-				slidesToShow: 1,
-			},
+				slidesToShow: 2,
+			}
+		},
+		{
 			breakpoint: 600,
 			settings: {
 				arrows: false,
@@ -129,60 +137,45 @@ $(document).ready(function() {
 
 
 	// Yandex map https://tech.yandex.ru/maps/doc/jsapi/2.1/quick-start/index-docpage/
-	ymaps.ready(init);
-	      
-	function init(){ 
-	    var myMap = new ymaps.Map("map", {
-	        center: [55.75352982, 37.61858401],
-	        zoom: 14,
+	initMap('arbat', [55.747137, 37.583338], '+7 (495) 504-3487 доб. 6772');
+	initMap('lubyanka', [55.761778, 37.628258], '+7 (495) 504-3487 доб. 5988');
+
+	formSubmit();
+
+
+});
+
+function initMap(idMap, center, phone){ 
+	ymaps.ready(function() {		
+	    var myMap = new ymaps.Map(idMap, {
+	        center: center,
+	        zoom: 16,
 	        controls: ['smallMapDefaultSet']
 	    });
 
+	     var MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        );
 
-	    myMap.controls
-	    	.remove('zoomControl')
-	    	.remove('geolocationControl')
-	    	.remove('typeSelector')
-	    	.remove('fullscreenControl')
-	    	.remove('searchControl');
+	    var myPlacemark = new ymaps.Placemark(center, {	    	
+		    balloonContent: '<div class="balloonTime">Время работы:<br>с 8:00 до 23:00</div><div class="ballonPhone">Контактный телефон:<br>'+phone+'</div>'
+	    }, {
+		    iconLayout: 'default#image',
+		    iconImageHref: 'img/point.png',
+		    iconImageSize: [33, 34],
+		    iconImageOffset: [-5, -50],
+		    // balloonContentHeader: '<div class="balloonTime">Время работы:<br>с 8:00 до 23:00</div>',    
+		    // balloonContentBody: '<div class="ballonPhone">Контактный телефон:<br>'+phone+'</div>'
+		});
 
+	    myMap.geoObjects.add(myPlacemark);
 
 	    myMap.behaviors.disable([
 	    	'drag',
 	    	'scrollZoom'
-    	]);
-
-	    var myPin = new ymaps.GeoObjectCollection({}, {
-		    iconLayout: 'default#image',
-		    iconImageHref: 'img/point.png',
-		    iconImageSize: [33, 34],
-		    iconImageOffset: [0, -5]
-		});
-	    
-	    var myPlacemark1 = new ymaps.Placemark([55.747137, 37.583338], {
-	    	balloonContentHeader: '<div class="balloonTime">Время работы:<br>с 8:00 до 23:00</div>',
-		    balloonContentBody: '<div class="ballonPhone">Контактный телефон:<br>+7 (495) 504-3487 доб. 6772</div>',
-		    // iconLayout: 'default#imageWithContent',
-		    // iconImageHref: '/img/point.png',
-		    // iconImageSize: [33, 34]
-	    });
-
-	    var myPlacemark2 = new ymaps.Placemark([55.761778, 37.628258], {
-	    	balloonContentHeader: '<div class="balloonTime">Время работы:<br>с 8:00 до 23:00</span>',
-		    balloonContentBody: '<div class="ballonPhone">Контактный телефон:<br>+7 (495) 504-3487 доб. 5988</div>',
-		    // iconLayout: 'default#imageWithContent',
-		    // iconImageHref: '/img/point.png',
-		    // iconImageSize: [33, 34]
-	    });
-	    
-
-	    myPin.add(myPlacemark1).add(myPlacemark2);
-	    myMap.geoObjects.add(myPin);
-	}
-
-	formSubmit();
-
-});
+		]);
+	});
+}
 
 
 // Простая проверка форм на заполненность и отправка аяксом
@@ -242,3 +235,18 @@ function formSubmit() {
         }
     });
 }
+
+// Хак для яндекс карт втавленных через iframe
+// Страуктура:
+//<div class="map__wrap" id="map-wrap">
+//  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
+//</div>
+// Обязательное свойство в style которое и переключет скрипт
+// document.addEventListener('click', function(e) {
+//     var map = document.querySelector('#map-wrap iframe')
+//     if(e.target.id === 'map-wrap') {
+//         map.style.pointerEvents = 'all'
+//     } else {
+//         map.style.pointerEvents = 'none'
+//     }
+// })
