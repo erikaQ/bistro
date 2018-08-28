@@ -303,7 +303,7 @@
 				<h2>Меню «АВ Бистро»</h2>
 
 				<div class="menu__nav_wrap">
-					<ul class="menu__nav nav nav-tabs $1">
+					<ul class="menu__nav nav nav-tabs">
 						<li class="menu__nav_item active"><a href="#menu1" data-toggle="tab" class="menu__nav_link">Завтраки</a></li>
 						<li class="menu__nav_item"><a href="#menu2" data-toggle="tab" class="menu__nav_link">Гоpячее</a></li>
 						<li class="menu__nav_item"><a href="#menu3" data-toggle="tab" class="menu__nav_link">Закуски и салаты</a></li>
@@ -316,7 +316,7 @@
 				<!-- end Nav tabs $1 -->
 
 				<!-- begin Tab panes $0 -->
-				<div class="tab-content menu__nav_content $0">
+				<div class="tab-content menu__nav_content">
 					<div class="tab-pane menu__list_wrap active" id="menu1">
 						<ul class="menu__list">
 							<li class="menu__list_item">
@@ -1498,25 +1498,17 @@
 				
 				<h2 class="line">Адреса наших ресторанов</h2>
 
-				<!-- begin Nav tabs -->
-				<ul class="maps__nav nav nav-tabs">
-					<li class="maps__nav_item active"><a href="#map1" class="maps__nav_link" data-toggle="tab">Арбат,  54/2, стр. 4</a></li>
-					<li class="maps__nav_item"><a href="#map2" class="maps__nav_link" data-toggle="tab">Большая Лубянка, 12/1</a></li>
+				<ul class="maps__nav">
+					<li class="maps__nav_item"><a href="#" class="maps__nav_link" id="arbat">Арбат,  54/2, стр. 4</a></li>
+					<li class="maps__nav_item"><a href="#" class="maps__nav_link" id="lubyanka">Большая Лубянка, 12/1</a></li>
 				</ul>
-				<!-- end Nav tabs -->
 
 			</div>
 
-			<!-- begin Tab panes -->
-			<div class="maps__map_wrap tab-content">
-				<div class="tab-pane active" id="map1">
-					<div class="maps__map" id="arbat"></div>
-				</div>
-				<div class="tab-pane" id="map2">
-					<div class="maps__map" id="lubyanka"></div>
-				</div>
+			<div class="maps__map_wrap">
+				<div class="maps__map" id="map"></div>
 			</div>
-			<!-- end Tab panes -->
+
 		</section><!-- /.maps-->
 
 
