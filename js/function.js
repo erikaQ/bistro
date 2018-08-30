@@ -56,6 +56,18 @@ $(document).ready(function() {
 	});
 
 
+    // Maps tabs
+	$('.maps__nav_link').on('click', function() {
+		var $this = $(this);
+
+		if( !$this.hasClass('active') ) {
+			$('.maps__nav_link').removeClass('active');
+		}
+
+		$this.toggleClass('active');
+	});
+
+
 	// Slick slider https://github.com/kenwheeler/slick
 	// Slider Top
 	$('.js-slider__top').slick({
@@ -80,7 +92,6 @@ $(document).ready(function() {
 		}
 	    ]
 	});
-
 	$('.js-slider__top_prev').on('click', function() {
 	 	$('.js-slider__top').slick('slickPrev');
 	 });
@@ -98,6 +109,7 @@ $(document).ready(function() {
 
 		$this.toggleClass('active');
 	});
+
 
 	// Slider Interior
 	$('.js-slider__interior').slick({
@@ -135,6 +147,10 @@ $(document).ready(function() {
 		$('.js-slider__interior').slick('slickNext');
 	});
 
+	// Fancybox Gallery https://fancyapps.com/fancybox/3/
+	$('[data-fancybox="gallery"]').fancybox();
+	
+	
 	formSubmit();
 
 });

@@ -36,6 +36,9 @@
 				text-decoration: none;
 				cursor: pointer;
 			}
+			&.active {
+				color: #ff9016;
+			}
 			@media (max-width : 479px) {
 				padding: 10px 0;
 			}

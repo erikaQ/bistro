@@ -145,6 +145,7 @@ h3 {
 h4 {
   color: #000;
   font-size: 28px;
+  font-family: 'Gill Sans MT Light';
   font-weight: 300; }
   @media (max-width: 479px) {
     h4 {
@@ -1289,7 +1290,7 @@ input[type=checkbox]:disabled:indeterminate:before {
   width: 475px;
   overflow: hidden;
   color: #000; }
-  @media (max-width: 768px) {
+  @media (max-width: 991px) {
     .menu__list {
       width: 100%; } }
   .menu__list_wrap {
@@ -1323,14 +1324,9 @@ input[type=checkbox]:disabled:indeterminate:before {
         top: -100px;
         width: 640px;
         height: 810px; } }
-    @media (max-width: 768px) {
+    @media (max-width: 991px) {
       .menu__list_img {
-        position: relative;
-        width: 100%;
-        height: auto;
-        top: 0px;
-        left: 0;
-        right: 0; } }
+        display: none; } }
     .menu__list_img img {
       width: 100%;
       height: auto; }
@@ -1403,6 +1399,8 @@ input[type=checkbox]:disabled:indeterminate:before {
         color: #ff9016;
         text-decoration: none;
         cursor: pointer; }
+      .maps__nav_link.active {
+        color: #ff9016; }
       @media (max-width: 479px) {
         .maps__nav_link {
           padding: 10px 0; } }

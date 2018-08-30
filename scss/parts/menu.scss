@@ -101,7 +101,7 @@
 	width: 475px;
 	overflow: hidden;
 	color: #000;
-	@media (max-width : 768px) {
+	@media (max-width : 991px) {
 		width: 100%;
 	}
 	&_wrap {
@@ -140,32 +140,9 @@
 			width: 640px;
 			height: 810px;
 		}
-		@media (max-width : 768px) {
-		 //    right: 0px;
-		 //    top: -50px;
-			// width: 640px;
-			// height: 810px;
-			// opacity: .2;
-			position: relative;
-			width: 100%;
-			height: auto;
-			top: 0px;
-			left: 0;
-			right: 0;
+		@media (max-width : 991px) {
+			display: none;
 		}
-		// @media (max-width : 480px) {
-		// 	right: 0px;
-		// 	left: 0;
-		//     top: 0px;
-		// 	width: 480px;
-		// 	height: 935px;
-		// }
-		// @media (max-width : 320px) {
-		// 	right: 0px;
-		//     top: 0px;
-		// 	width: 320px;
-		// 	height: 405px;
-		// }
 		img {
 			width: 100%;
 			height: auto;

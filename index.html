@@ -8,6 +8,7 @@
 	<meta name="description" content="" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.0/jquery.fancybox.min.css" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -252,7 +253,7 @@
 					<div class="slider__top_gallery">
 						<div class="js-slider__top_gallery">
 							<div class="js-slide">
-								<div class="slider__top_gallery_item">
+								<div class="slider__top_gallery_item active">
 									<img class="slider__top_gallery_img" src="img/slider-top/slider__top_min1.jpg" alt="">
 								</div>
 							</div>
@@ -1508,7 +1509,6 @@
 			<div class="maps__map_wrap">
 				<div class="maps__map" id="map"></div>
 			</div>
-
 		</section><!-- /.maps-->
 
 
@@ -1541,12 +1541,10 @@
 					</li>
 				</ul>
 			</div>
-		</section>
-		<!-- /.actions-->
+		</section><!-- /.actions-->
 
 
 		<section class="interior" id="interiors">
-
 			<div class="container_center">
 
 				<div class="slider__interior_top">
@@ -1557,39 +1555,56 @@
 						<a href="#" class="slider__interior_arrow slider__interior_next js-interior_next"></a>
 					</div>
 				</div>				
-
-				<div class="slider__interior js-slider__interior">
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img2.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img3.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img1.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img2.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img3.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img1.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img2.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img3.jpg" alt=""></div>
-					</div>
-					<div class="js_slide">
-						<div class="slider__interior_item"><img src="img/interior/interior-img1.jpg" alt=""></div>
-					</div>
-				</div>
-
-			</div>
 			
+			</div>
+
+			<div class="slider__interior js-slider__interior">
+				<div class="js-slide">
+					<a href="img/interior/interior-img2.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img2.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img3.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img3.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img1.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img1.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img2.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img2.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img3.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img3.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img1.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img1.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img2.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img2.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img3.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img3.jpg" alt="">
+					</a>
+				</div>
+				<div class="js-slide">
+					<a href="img/interior/interior-img1.jpg" class="slider__interior_item" data-fancybox="gallery">
+						<img src="img/interior/interior-img1.jpg" alt="">
+					</a>
+				</div>
+			</div>
 		</section><!-- /.interior-->
 
 
@@ -1634,27 +1649,25 @@
 
 	<!-- begin footer -->
 	<footer class="footer">	
-	
 		<div class="footer__left">
 			2018, «Азбука Вкуса». Все права защищены. <a href="#" class="footer__link">Условия и соглашения.</a>
 		</div>
 		<div class="footer__right">
 			<ul class="soc">
-				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_fb.svg" alt=""></a></li>
-				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_in.svg" alt=""></a></li>
-				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_tw.svg" alt=""></a></li>
+				<li class="soc__item"><a href="https://ru-ru.facebook.com/av.bistro/" target="_blank" class="soc__link"><img src="img/soc_fb.svg" alt=""></a></li>
+				<li class="soc__item"><a href="https://www.instagram.com/av.bistro/" target="_blank" class="soc__link"><img src="img/soc_in.svg" alt=""></a></li>
+				<!-- <li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_tw.svg" alt=""></a></li>
 				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_vk.svg" alt=""></a></li>
-				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_yt.svg" alt=""></a></li>
+				<li class="soc__item"><a href="#" class="soc__link"><img src="img/soc_yt.svg" alt=""></a></li> -->
 			</ul>
-		</div>	
-
+		</div>
 	</footer>
 	<!-- end footer -->
 
 </div>
 
-<!-- <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.0/jquery.fancybox.min.js"></script>
 <script src="js/libs/slick.min.js"></script>
 <script src="js/libs/tab.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
