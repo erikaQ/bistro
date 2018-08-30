@@ -1501,7 +1501,8 @@ input[type=checkbox]:disabled:indeterminate:before {
     .slider__interior {
       margin-bottom: 40px; } }
   .slider__interior_item {
-    margin-left: 2px; }
+    margin-left: 1px;
+    display: block; }
   .slider__interior_top {
     position: relative; }
   .slider__interior_arrows {
