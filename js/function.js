@@ -1,3 +1,18 @@
+var TempApp = {
+    lgWidth: 1200,
+    mdWidth: 992,
+    smWidth: 768,
+    iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+    touchDevice: function() { return navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i); }
+};
+
+function isLgWidth() { return $(window).width() >= TempApp.lgWidth; } // >= 1200
+function isMdWidth() { return $(window).width() >= TempApp.mdWidth && $(window).width() < TempApp.lgWidth; } //  >= 992 && < 1200
+function isSmWidth() { return $(window).width() >= TempApp.smWidth && $(window).width() < TempApp.mdWidth; } // >= 768 && < 992
+function isXsWidth() { return $(window).width() < TempApp.smWidth; } // < 768
+function isIOS() { return TempApp.iOS(); } // for iPhone iPad iPod
+function isTouch() { return TempApp.touchDevice(); } // for touch device
+
 $(document).ready(function() {
 
 	// First screen full height
@@ -36,6 +51,11 @@ $(document).ready(function() {
 		$('html, body').animate({
     		scrollTop: currentBlockOffset - 78
     	}, 500);
+
+    	if (isXsWidth()) {
+    		$('.js-navbar').slideUp(300);
+			$('.js__navbar-toggle').removeClass('open');
+    	}
 	});
 
 
@@ -100,16 +120,6 @@ $(document).ready(function() {
 	 	$('.js-slider__top').slick('slickNext');
 	 });
 
-	$('.slider__top_gallery_item').on('click', function() {
-		var $this = $(this);
-
-		if( !$this.hasClass('active') ) {
-			$('.slider__top_gallery_item').removeClass('active');
-		}
-
-		$this.toggleClass('active');
-	});
-
 
 	// Slider Interior
 	$('.js-slider__interior').slick({
@@ -149,6 +159,11 @@ $(document).ready(function() {
 
 	// Fancybox Gallery https://fancyapps.com/fancybox/3/
 	$('[data-fancybox="gallery"]').fancybox();
+
+	$('.fancybox-slide').on('click', function(event) {
+		event.preventDefault();
+		$.fancybox.close();
+	});
 	
 	
 	formSubmit();
