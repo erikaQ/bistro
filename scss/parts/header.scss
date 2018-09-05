@@ -15,9 +15,10 @@
 	transition: margin-bottom .7s;
 	@extend %clear_a;
 	@media (max-width : 991px) {
-		padding: 0;
+		// padding: 0;
 	}
-	@media (max-width : 767px) {
+	@media (max-width : 991px) {
+		padding-bottom: 15px;
 		.container_center {
 			padding: 0;
 		}
@@ -44,13 +45,13 @@
 	@media (max-width : 1199px) {
 		margin-left: -20px;
 	}
-	@media (max-width : 767px) {
+	@media (max-width : 991px) {
 		position: relative;
-		top: 41px;
+		top: 15px;
 		width: 100%;
 		z-index: 10;
 		margin-left: 0;
-		margin-bottom: 41px;
+		// margin-bottom: 15px;
 		display: none;
 		background-color: #5d5d5d;
 	}
@@ -60,7 +61,7 @@
 		@media (max-width : 1199px) {
 			margin-left: 20px;
 		}
-		@media (max-width : 767px) {
+		@media (max-width : 991px) {
 			float: none;
 			margin-left: 0;
 		}
@@ -74,7 +75,7 @@
 			color: #ff9016;
 			text-decoration: none;
 		}
-		@media (max-width : 767px) {
+		@media (max-width : 991px) {
 			padding: 13px 15px;
 			color: #fff;
 			font-size: 15px;
@@ -86,12 +87,12 @@
 
 	&__toggle {
 		position: absolute;
-		top: 5px;
+		top: 28px;
 		right: 15px;
 		width: 30px;
 		height: 25px;
 		padding: 3px 0;
-		@media (max-width : 767px) {
+		@media (max-width : 991px) {
 			display: block;
 		}
 		&_wrap {
@@ -101,11 +102,13 @@
 					opacity: .7;
 				}
 			}
-			@media (max-width : 767px) {
-				position: relative;
-				padding: 20px 0 21px;
+			@media (max-width : 991px) {
+				// position: relative;
+				// top: 10px;
+				// padding: 20px 0 21px;
 				display: block;
-				cursor: pointer;
+				// display: inline-block;
+				// cursor: pointer;
 			}
 		}
 	}
@@ -126,7 +129,7 @@
 /* Addresses
 -------------------------------------------------------------------------------*/
 .addresses {
-	float: left;
+	float: right;
 	margin-left: 68px;
 	line-height: 1.3;
 	@extend %clear_a;
@@ -137,13 +140,21 @@
 		margin-left: 0;
 	}
 	@media (max-width : 991px) {
-		display: none;
+		float: left;
+	}
+	@media (max-width : 480px) {
+		padding-right: 45px;
 	}
 	&__item {
 		float: left;
 		margin-left: 74px;
 		@media (max-width : 1199px) {
 			margin-left: 35px;
+		}
+		@media (max-width : 480px) {
+			&:first-child {
+				margin-bottom: 10px;
+			}
 		}
 	}
 	&__top {
